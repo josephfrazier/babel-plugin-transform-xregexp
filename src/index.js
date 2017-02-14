@@ -1,11 +1,19 @@
-import 'better-log/install';
+import XRegExp from "xregexp";
 
-module.exports = function ({ types: t }) {
-	return {
-		visitor: {
-			Program(path, file) {
-				path.unshiftContainer('body', t.expressionStatement(t.stringLiteral('use helloworld')));
-			}
-		}
-	};
-};
+export default function ({ types: t }) {
+  return {
+    visitor: {
+      RegExpLiteral(path) {
+        const { node } = path;
+
+        const xregexp = XRegExp(node.pattern, node.flags);
+        const { source, flags } = xregexp;
+
+        path.replaceWith(t.newExpression(t.identifier("RegExp"), [
+          t.stringLiteral(source),
+          t.stringLiteral(flags)
+        ]));
+      }
+    }
+  };
+}

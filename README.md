@@ -1,11 +1,16 @@
-# babel-plugin-hello-world
+# babel-plugin-transform-xregexp
 
-Extended plugin sample for Babel.
+Use [XRegExp] syntax in your regular expression literals. See the [tests] for a
+few examples of supported syntax. Note that not all XRegExp syntax can be
+parsed by Babel.
+
+[XRegExp]: http://xregexp.com/
+[tests]: test/fixtures/
 
 ## Installation
 
 ```sh
-$ npm install babel-plugin-hello-world
+$ npm install babel-plugin-transform-xregexp
 ```
 
 ## Usage
@@ -16,20 +21,20 @@ $ npm install babel-plugin-hello-world
 
 ```json
 {
-  "plugins": ["hello-world"]
+  "plugins": ["transform-xregexp"]
 }
 ```
 
 ### Via CLI
 
 ```sh
-$ babel --plugins hello-world script.js
+$ babel --plugins transform-xregexp script.js
 ```
 
 ### Via Node API
 
 ```javascript
 require('babel').transform('code', {
-  plugins: ['hello-world']
+  plugins: ['transform-xregexp']
 });
 ```
