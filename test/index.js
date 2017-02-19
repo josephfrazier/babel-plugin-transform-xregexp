@@ -35,7 +35,7 @@ function runTest(dir) {
   var expected = fs.readFileSync(dir.path + '/expected.js', 'utf-8');
 
   function normalizeLines(str) {
-    return str.trimRight().replace(/\r\n/g, '\n');
+    return str.trimRight().replace(/\r\n/g, '\n').replace(/\(\?:\)/g, '');;
   }
 
   process.stdout.write(chalk.bgWhite.black(dir.name));
