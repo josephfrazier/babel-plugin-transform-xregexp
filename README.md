@@ -1,8 +1,8 @@
 # babel-plugin-transform-xregexp
 
-Use [XRegExp] syntax in your regular expression literals. See the [tests] for a
-few examples of supported syntax. Note that not all XRegExp syntax can be
-parsed by Babel.
+Use [XRegExp] syntax in your regular expressions. See the [tests] for a few
+examples of supported syntax. Note that not all XRegExp syntax can be parsed by
+Babel.
 
 [XRegExp]: http://xregexp.com/
 [tests]: test/fixtures/
