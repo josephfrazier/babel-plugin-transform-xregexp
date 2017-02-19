@@ -24,10 +24,10 @@
     "watch": "^1.0.1"
   },
   "scripts": {
-    "release": "babel src --out-dir dist",
+    "build": "babel src --out-dir dist",
     "test": "node test",
     "watch": "node test --watch",
-    "prepublish": "npm test && npm run release"
+    "prepublish": "npm test && npm run build"
   },
   "keywords": [
     "babel-plugin",
