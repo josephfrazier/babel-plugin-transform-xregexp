@@ -9,10 +9,9 @@ export default function ({ types: t }) {
         const xregexp = XRegExp(node.pattern, node.flags);
         const { source, flags } = xregexp;
 
-        path.replaceWith(t.newExpression(t.identifier("RegExp"), [
-          t.stringLiteral(source),
-          t.stringLiteral(flags)
-        ]));
+        if (source !== node.pattern || flags !== node.flags) {
+          path.replaceWith(t.RegExpLiteral(source, flags));
+        }
       }
     }
   };

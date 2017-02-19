@@ -1,1 +1,1 @@
-new RegExp("^[a-z]+$", "im");
+/^[a-z]+$/im;
