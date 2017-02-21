@@ -2,8 +2,7 @@ import XRegExp from 'xregexp'
 
 function createRegExpLiteral (args, t) {
   const evaluatedArgs = args.map((a) => a.evaluate())
-  if (!evaluatedArgs.every((a) => a.confident === true &&
-      typeof a.value === 'string')) {
+  if (!evaluatedArgs.every((a) => a.confident && typeof a.value === 'string')) {
     return
   }
   const pattern = (evaluatedArgs.length >= 1 &&
