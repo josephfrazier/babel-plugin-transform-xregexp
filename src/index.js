@@ -5,8 +5,7 @@ function createRegExpLiteral (args, t) {
   if (!evaluatedArgs.every((a) => a.confident && typeof a.value === 'string')) {
     return
   }
-  const pattern = (evaluatedArgs.length >= 1 &&
-                    evaluatedArgs[0].value !== '')
+  const pattern = (evaluatedArgs.length >= 1 && evaluatedArgs[0].value !== '')
                   ? evaluatedArgs[0].value
                   : '(?:)'
   const flags = evaluatedArgs.length >= 2
