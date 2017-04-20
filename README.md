@@ -10,7 +10,9 @@ Babel.
 ## Installation
 
 ```sh
-$ npm install babel-plugin-transform-xregexp
+yarn add --dev babel-plugin-transform-xregexp
+# or
+npm install --save-dev babel-plugin-transform-xregexp
 ```
 
 ## Usage
