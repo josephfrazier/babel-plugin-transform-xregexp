@@ -1,4 +1,5 @@
 RegExp();
+RegExp('');
 new RegExp('^[a-z]+$');
 RegExp('( [0-9]{4} ) -?  # year  \n' +
        '( [0-9]{2} ) -?  # month \n' +
@@ -8,3 +9,9 @@ RegExp(`
   ( [0-9]{2} ) -?  # month
   ( [0-9]{2} )     # day
 `, 'x');
+
+RegExp(`
+  ( [\d]{4} ) -?  # year
+  ( [\d]{2} ) -?  # month
+  ( [\d]{2} )     # day
+`, 'x' + '');
