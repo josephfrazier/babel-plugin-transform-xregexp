@@ -46,6 +46,13 @@ export default function ({ types: t }) {
         if (source !== node.pattern || flags !== node.flags) {
           path.replaceWith(t.RegExpLiteral(source, flags))
         }
+      },
+      MemberExpression (path) {
+        const { node: { object, property } } = path
+
+        if (object.type === 'RegExpLiteral' && property.name === 'source') {
+          path.replaceWith(t.StringLiteral(object.pattern))
+        }
       }
     }
   }
