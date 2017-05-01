@@ -1,3 +1,4 @@
+// RegExp
 RegExp();
 RegExp('');
 new RegExp('^[a-z]+$');
@@ -15,3 +16,17 @@ RegExp(`
   ( [\d]{2} ) -?  # month
   ( [\d]{2} )     # day
 `, 'x' + '');
+
+// leadingModeModifier
+/(?im)^[a-z]+$/;
+new RegExp('(?im)^[a-z]+$');
+
+/(?im)^[a-z]+$/.source;
+
+// namedCapture
+/\b(?<word>[a-z]+)\s+\k<word>\b/gi;
+new RegExp('\\b(?<word>[a-z]+)\\s+\\k<word>\\b', 'gi');
+new RegExp(`\b(?<word>[a-z]+)\s+\k<word>\b`, 'gi');
+new RegExp(`\b([a-z]+)\s+\\1\b`, 'gi');
+
+/\b(?<word>[a-z]+)\s+\k<word>\b/.source;

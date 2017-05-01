@@ -5,7 +5,7 @@ examples of supported syntax. Note that not all XRegExp syntax can be parsed by
 Babel.
 
 [XRegExp]: http://xregexp.com/
-[tests]: test/fixtures/
+[tests]: test/fixtures/all/actual.js
 
 ## Installation
 
