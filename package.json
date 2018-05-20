@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-xregexp",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Use XRegExp syntax in your regular expressions",
   "repository": "https://github.com/josephfrazier/babel-plugin-transform-xregexp",
   "license": "MIT",
