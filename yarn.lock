@@ -2194,9 +2194,9 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
-xregexp@^3.1.1:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/xregexp/-/xregexp-3.2.0.tgz#cb3601987bfe2695b584000c18f1c4a8c322878e"
+xregexp@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/xregexp/-/xregexp-4.1.1.tgz#eb8a032aa028d403f7b1b22c47a5f16c24b21d8d"
 
 xtend@^4.0.0, xtend@^4.0.1:
   version "4.0.1"
